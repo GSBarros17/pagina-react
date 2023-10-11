@@ -5,10 +5,13 @@ import Contact from "./components/pages/Contact"
 import NewProject from "./components/pages/NewProject"
 
 import Container from "./components/layout/Container"
+import Navbar from "./components/layout/Navbar"
+import Footer from "./components/layout/Footer"
 
 function App() {
   return (
     <BrowserRouter>
+    <Navbar />
      <ul>
         <Link to="/">Home</Link>
         <Link to="/Company">Empresa</Link>
@@ -24,7 +27,7 @@ function App() {
             </Routes>
         </Container>
         
-      <p>Footer</p>
+      <Footer />
     </BrowserRouter>
   );
 }
