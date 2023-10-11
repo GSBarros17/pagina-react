@@ -21,7 +21,10 @@ export default function Navbar(){
                         <Link to="/Contact">Contato</Link>
                     </li>
                     <li className={styles.item}>
-                        <Link to="/NewProject">Novo Projeto</Link>
+                        <Link to="/Projects">Projetos</Link>
+                    </li>   
+                    <li className={styles.item}>
+                        <Link to="/NewProjects">Novo Projeto</Link>
                     </li>                  
                 </ul>
             </Container>
