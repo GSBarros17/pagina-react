@@ -18,14 +18,14 @@ export default function Navbar(){
                         <Link to="/Company">Empresa</Link>
                     </li>
                     <li className={styles.item}>
-                        <Link to="/Contact">Contato</Link>
-                    </li>
-                    <li className={styles.item}>
                         <Link to="/Projects">Projetos</Link>
                     </li>   
                     <li className={styles.item}>
                         <Link to="/NewProjects">Novo Projeto</Link>
-                    </li>                  
+                    </li>
+                    <li className={styles.item}>
+                        <Link to="/Contact">Contato</Link>
+                    </li>                
                 </ul>
             </Container>
         </nav>
