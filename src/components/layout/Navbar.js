@@ -11,16 +11,16 @@ export default function Navbar(){
                     <img className={styles.logoNavbar} src={logo} alt="logo Finance Project" />
                 </Link>
                 <ul className={styles.list}>
-                    <li>
+                    <li className={styles.item}>
                         <Link to="/">Home</Link>
                     </li>
-                    <li>
+                    <li className={styles.item}>
                         <Link to="/Company">Empresa</Link>
                     </li>
-                    <li>
+                    <li className={styles.item}>
                         <Link to="/Contact">Contato</Link>
                     </li>
-                    <li>
+                    <li className={styles.item}>
                         <Link to="/NewProject">Novo Projeto</Link>
                     </li>                  
                 </ul>

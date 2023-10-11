@@ -15,3 +15,16 @@
     align-items: center;
 }
 
+.item{
+    margin-right: 1rem;
+}
+
+.item a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.item a:hover{
+    color: #ffde59;
+    border-bottom: 1px solid #ffde59;
+}
