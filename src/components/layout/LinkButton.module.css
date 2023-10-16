@@ -1,6 +1,12 @@
 .btn {
-    width: 4rem;
-    height: 1rem;
+    padding: 0.5em 1em;
     background-color: #171717;
-    color: #9f9f9f;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    color: #FFD00D;
 }
