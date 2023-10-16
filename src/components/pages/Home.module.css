@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2em;
+    padding: 4em;
 }
 
 .containerHome h1{
@@ -14,9 +14,18 @@
 
 .containerHome h1 span {
     background-color: #171717;
-    color: #FFD00D;
+    color: #ffffff;
+    text-decoration: underline #FFD00D;
+    padding: 0 0.2em;
 }
 
+.containerHome p {
+    margin-bottom: 1.5em;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #5b5b5b;
+}
 .imgHome{
     width: 20%;
+    margin: 3em 0;
 }
