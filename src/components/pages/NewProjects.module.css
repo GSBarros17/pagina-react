@@ -6,6 +6,7 @@
 
 .newprojectContainer h1{
     margin-top: 2em;
+    text-decoration: underline #FFD00D;
 }
 
 .newprojectContainer p{
