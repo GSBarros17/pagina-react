@@ -1,0 +1,14 @@
+.newprojectContainer {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.newprojectContainer h1{
+    margin-top: 2em;
+}
+
+.newprojectContainer p{
+    margin-top: 1em;
+    color: #5b5b5b;
+}

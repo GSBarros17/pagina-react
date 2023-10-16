@@ -1,3 +1,11 @@
+import styles from "./NewProjects.module.css"
+
 export default function NewProjects(){
-    return <h1>NewProjects</h1>
+    return (
+        <div className={styles.newprojectContainer}>
+            <h1>Criar projeto</h1>
+            <p>Crie seu projeto e gerencie-o</p>
+
+        </div>
+    )
 }
