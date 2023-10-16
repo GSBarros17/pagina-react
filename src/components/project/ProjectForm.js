@@ -1,13 +1,11 @@
+import Input from "../form/Input"
+
 export default function ProjectForm(){
     return(
         <div>
            <form>
-              <div>
-                <input type="text" placeholder="Insira o nome do projeto" />
-              </div>
-              <div>
-                <input type="number" placeholder="Insira o valor do projeto" />
-              </div>
+              <Input type="text" text="Nome do projeto:" name="Nome do projeto" placeholder="Digite o nome do projeto"/>
+              <Input type="number" text="Valor total do projeto:" name="Valor total projeto" placeholder="Digite o valor total do projeto"/>
               <div>
                 <select name="category-id">
                   <option disabled>Selecione a categoria</option>
