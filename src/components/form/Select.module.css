@@ -1,0 +1,17 @@
+.selectForm{
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+    width: 100%;
+}
+
+.selectForm label{
+    margin-top: 0.5em;
+    text-align: left;
+    font-weight: 500;
+}
+.selectForm select{
+    padding: 0.8em;
+    margin-top: 0.5em;
+    border: none;
+}
