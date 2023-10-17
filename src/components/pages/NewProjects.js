@@ -10,7 +10,7 @@ export default function NewProjects(){
         project.cost = 0
         project.service = []
 
-        fetch('http://localhost:5000/categories', {
+        fetch('http://localhost:5000/projects', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -20,7 +20,7 @@ export default function NewProjects(){
             .then((resp) => resp.json())
             .then((data) => {
                 console.log(data)
-                navigate('/projects', {message: 'Projeto criado com sucesso!'})
+                navigate('/projects', {state: {text: 'Projeto criado com sucesso!'}})
             })
             .catch((err) => console.log(err))
     }
