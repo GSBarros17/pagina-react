@@ -18,6 +18,10 @@
   "scripts": {
     "start": "react-scripts start",
     "backend": "json-server --watch db.json --port 5000",
+    "start:frontend": "npm start",
+    "start:backend": "npm run backend",
+    "start:dev": "run-p start:frontend start:backend", 
+    //iniciar o front e o back-end usar o comando "npm run start:dev"
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
