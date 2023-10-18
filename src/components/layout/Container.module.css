@@ -5,13 +5,3 @@
     justify-content:space-between;
     margin: 0 auto;
 }
-
-.startFlex{
-    justify-content: flex-start;
-}
-
-.colunmFlex{
-    flex-direction: column;
-    justify-content: flex-start;
-}
-

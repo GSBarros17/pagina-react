@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom"
 import styles from "./Projects.module.css"
 import Message from "../layout/Message"
 import LinkButton from "../layout/LinkButton"
-import Container from "../layout/Container"
 import Cards from "../project/Cards"
 
 
@@ -38,7 +37,7 @@ export default function Projects(){
                 <LinkButton to="/NewProjects" text="Criar projeto" />
             </div>
             {text && <Message type="success" textMsg={text} />}     
-            <Container customClass="start">
+            <div className={styles.cardContainer}>
                 {projects.length > 0 &&
                     projects.map((project) => 
                     <Cards 
@@ -47,7 +46,7 @@ export default function Projects(){
 
                     />
                 )}
-            </Container>
+            </div>
         </div>  
     )
 }

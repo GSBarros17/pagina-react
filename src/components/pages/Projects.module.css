@@ -12,3 +12,8 @@
 .tittleProjects h1{
     text-decoration: underline #FFD00D;
 }
+
+.cardContainer{
+    display: flex;
+    justify-content: flex-start;
+}
