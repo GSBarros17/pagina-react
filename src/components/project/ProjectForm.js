@@ -51,12 +51,12 @@ export default function ProjectForm({handleSubmit, projectData}){
               <Input 
                 type="number" 
                 text="Valor total do projeto:" 
-                name="Value-project" 
+                name="Value_project" 
                 placeholder="Digite o valor total do projeto"
                 handleOnChange={handleChange}    
               />
               <Select 
-                name="Category-id" 
+                name="Category_id" 
                 text="Selecione a categoria" 
                 options={categories}
                 handleOnChange={handleSelect}

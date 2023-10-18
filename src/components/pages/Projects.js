@@ -1,17 +1,35 @@
+import { useState, useEffect} from "react"
 import { useLocation } from "react-router-dom"
 import styles from "./Projects.module.css"
 import Message from "../layout/Message"
 import LinkButton from "../layout/LinkButton"
 import Container from "../layout/Container"
+import Cards from "../project/Cards"
 
 
 export default function Projects(){
+
+    const [projects, setProjects] = useState([])
 
     const location = useLocation()
     let text = ''
     if (location.state){
         text = location.state.text
     }
+
+    useEffect(()=> {
+        fetch('http://localhost:5000/projects', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+        .then((resp) => resp.json())
+        .then((data) => {
+            setProjects(data)
+        })
+        .catch((err) => console.log(err))
+    }, [])
 
     return (
         <div className={styles.projectsContainer}>
@@ -21,7 +39,14 @@ export default function Projects(){
             </div>
             {text && <Message type="success" textMsg={text} />}     
             <Container customClass="start">
-                <p>...projetos</p>
+                {projects.length > 0 &&
+                    projects.map((project) => 
+                    <Cards 
+                        name={project.Name_project}
+                        budget={project.Value_project}
+
+                    />
+                )}
             </Container>
         </div>  
     )

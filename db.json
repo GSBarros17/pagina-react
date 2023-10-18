@@ -2,7 +2,7 @@
   "projects": [
     {
       "Name_project": "projeto 2",
-      "Value-project": "8000",
+      "Value_project": "8000",
       "category": {
         "id": "4",
         "name": "Planejamento"
@@ -13,7 +13,7 @@
     },
     {
       "Name_project": "projeto 2",
-      "Value-project": "7000",
+      "Value_project": "7000",
       "category": {
         "id": "3",
         "name": "Design"
@@ -21,16 +21,6 @@
       "cost": 0,
       "service": [],
       "id": 2
-    },
-    {
-      "cost": 0,
-      "service": [],
-      "id": 3
-    },
-    {
-      "cost": 0,
-      "service": [],
-      "id": 4
     }
   ],
   "categories": [
