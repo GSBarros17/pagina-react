@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4em;
+    padding: 2em;
 }
 
 .containerHome h1{
@@ -27,5 +27,5 @@
 }
 .imgHome{
     width: 15em;
-    margin: 3em 0;
+    margin: 2em 0;
 }
