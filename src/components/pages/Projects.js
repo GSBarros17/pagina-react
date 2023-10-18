@@ -41,8 +41,11 @@ export default function Projects(){
                 {projects.length > 0 &&
                     projects.map((project) => 
                     <Cards 
+                        id={project.id}
                         name={project.Name_project}
                         budget={project.Value_project}
+                        category={project.category.name}
+                        key={project.id}
 
                     />
                 )}
