@@ -2,6 +2,7 @@ import { useState, useEffect} from "react"
 import { useLocation } from "react-router-dom"
 import styles from "./Projects.module.css"
 import Message from "../layout/Message"
+import Loading from "../layout/Loading"
 import LinkButton from "../layout/LinkButton"
 import Cards from "../project/Cards"
 
@@ -9,6 +10,7 @@ import Cards from "../project/Cards"
 export default function Projects(){
 
     const [projects, setProjects] = useState([])
+    const [removeLoading, setRemoveLoading] = useState(false)
 
     const location = useLocation()
     let text = ''
@@ -17,17 +19,20 @@ export default function Projects(){
     }
 
     useEffect(()=> {
-        fetch('http://localhost:5000/projects', {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        }
-    })
-        .then((resp) => resp.json())
-        .then((data) => {
-            setProjects(data)
-        })
-        .catch((err) => console.log(err))
+        setTimeout(() => {
+            fetch('http://localhost:5000/projects', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            .then((resp) => resp.json())
+            .then((data) => {
+                setProjects(data)
+                setRemoveLoading(true)
+            })
+            .catch((err) => console.log(err))
+        }, 1000)
     }, [])
 
     return (
@@ -46,10 +51,13 @@ export default function Projects(){
                         budget={project.Value_project}
                         category={project.category.name}
                         key={project.id}
-
                     />
                 )}
             </div>
+            {!removeLoading && <Loading/>}
+            {removeLoading && projects.length === 0 && (
+                <p className={styles.noneCard}>Não há projetos cadastrados!</p>
+            )}
         </div>  
     )
 }

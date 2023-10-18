@@ -19,3 +19,10 @@
     grid-column-gap: 10px;
     grid-row-gap: 1em;
 }
+
+.noneCard{
+    height: 40vh;
+    font-size: 1.2em;
+    color: #3b3b3b;
+    font-weight: 600;
+}
