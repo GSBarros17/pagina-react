@@ -11,6 +11,7 @@ export default function Projects(){
 
     const [projects, setProjects] = useState([])
     const [removeLoading, setRemoveLoading] = useState(false)
+    const [removeMessage, setRemoveMessage] = useState("")
 
     const location = useLocation()
     let text = ''
@@ -35,13 +36,29 @@ export default function Projects(){
         }, 1000)
     }, [])
 
+    function removeCard(id){
+        fetch(`http://localhost:5000/projects/${id}`, {
+            method:'DELETE',
+            headers: {
+                'Content-type': 'application/json',
+            }
+        })
+        .then((resp) => resp.json())
+        .then(() => {
+            setProjects(projects.filter((project) => project.id !== id))
+            setRemoveMessage("Projeto excluido com sucesso!")  
+        })
+        .catch((err) => console.log(err))
+    }
+
     return (
         <div className={styles.projectsContainer}>
             <div className={styles.tittleProjects}>
                 <h1>Meus Projetos</h1>
                 <LinkButton to="/NewProjects" text="Criar projeto" />
             </div>
-            {text && <Message type="success" textMsg={text} />}     
+            {text && <Message type="success" textMsg={text} />}
+            {removeMessage && <Message type="success" textMsg={removeMessage} />}   
             <div className={styles.cardContainer}>
                 {projects.length > 0 &&
                     projects.map((project) => 
@@ -51,6 +68,7 @@ export default function Projects(){
                         budget={project.Value_project}
                         category={project.category.name}
                         key={project.id}
+                        handleRemove={removeCard}
                     />
                 )}
             </div>
