@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes,BrowserRouter, Route } from "react-rout
 import Home from "./components/pages/Home"
 import Company from "./components/pages/Company"
 import Contact from "./components/pages/Contact"
+import Project from "./components/pages/Project"
 import Projects from "./components/pages/Projects"
 import NewProjects from "./components/pages/NewProjects"
 
@@ -18,7 +19,8 @@ function App() {
             <Route path= "/" element={<Home/>}/> 
             <Route path= "/Company" element={<Company/>}/> 
             <Route path= "/Contact" element={<Contact/>}/>
-            <Route path= "/Projects" element={<Projects/>}/>   
+            <Route path= "/Projects" element={<Projects/>}/>
+            <Route path= "/Project/:id" element={<Project/>}/>    
             <Route path= "/NewProjects" element={<NewProjects/>}/>    
           </Routes>
         </Container>  
