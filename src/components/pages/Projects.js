@@ -37,6 +37,7 @@ export default function Projects(){
     }, [])
 
     function removeCard(id){
+        setRemoveMessage('')
         fetch(`http://localhost:5000/projects/${id}`, {
             method:'DELETE',
             headers: {

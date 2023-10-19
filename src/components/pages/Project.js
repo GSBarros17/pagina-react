@@ -24,9 +24,9 @@ export default function Project(){
     
     return(
         <div>
-        {project &&(
-             <p>{project.Name_project}</p>
-         )}
-    </div>
+            {project &&(
+                <p>{project.Name_project}</p>
+            )}
+        </div>
     )
 }
