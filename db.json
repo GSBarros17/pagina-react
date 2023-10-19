@@ -10,6 +10,17 @@
       "cost": 0,
       "service": [],
       "id": 1
+    },
+    {
+      "Name_project": "projeto 3",
+      "Value_project": "968754",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "service": [],
+      "id": 3
     }
   ],
   "categories": [
