@@ -12,7 +12,9 @@ export default function Cards({id, name, budget, category, handleRemove}){
   
   return(
         <div className={styles.projectCard}>
-          <h4>{name}</h4>
+          <div className={styles.tittleCard}>
+            <h4>{name}</h4>
+          </div>
           <p>
             <span>Orçamento: R$</span><Numeral format="0,000.00">{budget}</Numeral>
           </p>
