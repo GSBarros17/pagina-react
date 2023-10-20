@@ -1,0 +1,54 @@
+.projectDetails{
+    padding: 2em;
+    width: 100%;
+}
+
+.projectDetailss h2, p{
+    margin-bottom: 0.5em;
+}
+
+.projectDetails h1{
+    background-color: #171717;
+    color: #f9f9f9;
+    text-decoration: underline #FFD00D;
+    padding: 0.2em 0.3em;
+    border-radius: 20px;
+}
+
+.projectDetails span{
+    font-weight: bold;
+}
+
+.projectContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn{
+    padding: 0.5em 1em;
+    background-color: #171717;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    color: #FFD00D;
+}
+
+.detailsContainer, .serviceFormContainer{
+    border-bottom: 1px solid #171717;
+    margin-bottom: 1.2em;
+    padding-bottom: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.projectInfo{
+    width: 100%;
+    margin-top: 2em;
+}
