@@ -1,6 +1,8 @@
+import styles from "./SectionContainer.module.css"
+
 export default function SectionContainer({img , altText, text}){
     return (
-        <div>
+        <div className={styles.containerSection}>
             <div>
                 <p>{text}</p>
             </div>

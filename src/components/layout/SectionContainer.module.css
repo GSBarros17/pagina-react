@@ -1,0 +1,18 @@
+.containerSection{
+    display: flex;
+    width: 90%;
+    padding: 2em;
+    margin: 0 auto;
+}
+
+.containerSection p {
+    font-size: 1.2em;
+    line-height: 1.2em;
+    padding-top: 1em;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.containerSection img{
+    width: 25em;
+}
