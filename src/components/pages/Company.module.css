@@ -1,0 +1,13 @@
+.companyContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2em;
+}
+
+.companyContainer span{
+    background-color:#171717;
+    color: #f9f9f9;
+    text-decoration: underline #FFD00D;
+    padding: 0.2em;
+}

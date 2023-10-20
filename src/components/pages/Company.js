@@ -1,4 +1,3 @@
-import {Link} from "react-router-dom"
 import styles from "./Company.module.css"
 import img2 from "../img/img2.png"
 import LinkButton from "../layout/LinkButton"
@@ -6,9 +5,9 @@ import SectionContainer from "../layout/SectionContainer"
 
 export default function Company(){
     return (
-        <div>
+        <div className={styles.companyContainer}>
             <div>
-                <h1>Historia da Finance</h1>
+                <h1>Sobre a <span>FINANCE</span></h1>
             </div>
             <LinkButton to="/NewProjects" text="Criar projeto"/>
             <SectionContainer text="Esse é um texte muito legal de se fazer, você não saber a 
