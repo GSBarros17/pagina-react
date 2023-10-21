@@ -1,18 +1,22 @@
 .containerSection{
     display: flex;
-    width: 90%;
-    padding: 2em;
-    margin: 0 auto;
+    width: 100%;
+    padding-top: 3em;
+    margin:2em auto;
+    background-color: #171717;
+    border-radius: 10px;
 }
 
 .containerSection p {
-    font-size: 1.2em;
-    line-height: 1.2em;
+    font-size: 2em;
+    line-height: 1.5em;
     padding-top: 1em;
-    width: 70%;
-    margin: 0 auto;
+    color: #f9f9f9;
+    padding: 1em;
+    
 }
 
 .containerSection img{
-    width: 25em;
+    width: 30em;
+    margin: 0 1.5em;
 }
