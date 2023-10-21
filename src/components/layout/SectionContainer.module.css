@@ -13,10 +13,14 @@
     padding-top: 1em;
     color: #f9f9f9;
     padding: 1em;
-    
+}
+
+.containerSection p span{
+    margin-right: 1em;
 }
 
 .containerSection img{
     width: 30em;
     margin: 0 1.5em;
 }
+
