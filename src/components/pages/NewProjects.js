@@ -29,7 +29,7 @@ export default function NewProjects(){
         <div className={styles.newprojectContainer}>
             <h1>Criar projeto</h1>
             <p>Crie seu projeto e gerencie-o</p>
-            <ProjectForm handleSubmit={createPost}/>
+            <ProjectForm handleSubmit={createPost} btn="Criar projeto"/>
         </div>
     )
 }

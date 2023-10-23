@@ -3,7 +3,7 @@ import Input from "../form/Input"
 import Select from "../form/Select"
 import FormBtn from "../form/FormBtn"
 
-export default function ProjectForm({handleSubmit, projectData}){
+export default function ProjectForm({handleSubmit, projectData, btn}){
     const [categories, setCategories] = useState([])
     const [project, setProject] = useState(projectData || {})
 
@@ -47,13 +47,15 @@ export default function ProjectForm({handleSubmit, projectData}){
                 name="Name_project" 
                 placeholder="Digite o nome do projeto"
                 handleOnChange={handleChange}
+                value={project.Name_project}
               />
               <Input 
                 type="number" 
                 text="Valor total do projeto:" 
                 name="Value_project" 
                 placeholder="Digite o valor total do projeto"
-                handleOnChange={handleChange}    
+                handleOnChange={handleChange} 
+                value={project.Value_project}   
               />
               <Select 
                 name="Category_id" 
@@ -62,7 +64,7 @@ export default function ProjectForm({handleSubmit, projectData}){
                 handleOnChange={handleSelect}
                 value={project.category ? project.category.id : ''}   
               />
-              <FormBtn value="Criar projeto"/>
+              <FormBtn value={btn}/>
            </form>
         </div>
     )

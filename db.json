@@ -12,11 +12,11 @@
       "id": 1
     },
     {
-      "Name_project": "Contratação de BD",
-      "Value_project": "15000",
+      "Name_project": "Desenvolvimento do BD",
+      "Value_project": "12000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
       "cost": 0,
       "service": [],

@@ -2,6 +2,8 @@ import styles from "./Project.module.css"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import Loading from "../layout/Loading"
+import ProjectForm from "../project/ProjectForm"
+import Message from "../layout/Message"
 
 export default function Project(){
     
@@ -28,6 +30,30 @@ export default function Project(){
 
     function toggleProjectForm(){
         setShowProjectForm(!showProjectForm)
+    }
+
+    function editPost(project){
+        console.log(project)
+        if(project.Value_project < project.cost){
+            //validação
+            //msg
+        }
+
+        fetch(`http://localhost:5000/projects/${project.id}`,{
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(project),
+            })
+            .then((resp) => resp.json())
+            .then((data) => {
+                setProject(data)
+                setShowProjectForm(false)
+                
+            })
+            .catch((err) => console.log(err))
+            
     }
     
     
@@ -56,6 +82,11 @@ export default function Project(){
                         ) : (
                             <div className={styles.projectInfo}>
                                 <p>Detalhe do projeto</p>
+                                <ProjectForm 
+                                    handleSubmit={editPost}
+                                    projectData={project}
+                                    btn="Concluir edição"
+                                />
                             </div>
                         )}
                     </div>
