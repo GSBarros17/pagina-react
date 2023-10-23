@@ -10,6 +10,7 @@ export default function Project(){
     const {id} = useParams()
     const [project, setProject] = useState()
     const [showProjectForm, setShowProjectForm] = useState(false)
+    const [showServiceForm, setShowServiceForm] = useState(false)
     const [message, setMessage] = useState()
     const [type, setType] = useState()
     
@@ -33,6 +34,10 @@ export default function Project(){
 
     function toggleProjectForm(){
         setShowProjectForm(!showProjectForm)
+    }
+
+    function toggleServiceForm(){
+        setShowServiceForm(!showServiceForm)
     }
 
     function editPost(project){
@@ -97,6 +102,17 @@ export default function Project(){
                         )}
                     </div>
                 </div>
+                <div className={styles.serviceFormContainer}>
+                    <h2>Adicione serviços:</h2>
+                    <button className={styles.btn} onClick={toggleServiceForm}>
+                        {!showServiceForm ? "Criar serviços" : "Fechar"}
+                    </button>
+                    <div className={styles.projectInfo}>
+                        {showServiceForm && <div>form do serviço</div>}
+                    </div>
+                </div>
+                <h2>Serviços</h2>
+                
             </div>
             : (<Loading />)}
         </>
