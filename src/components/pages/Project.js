@@ -10,6 +10,9 @@ export default function Project(){
     const {id} = useParams()
     const [project, setProject] = useState()
     const [showProjectForm, setShowProjectForm] = useState(false)
+    const [message, setMessage] = useState()
+    const [type, setType] = useState()
+    
     
 
     useEffect(()=> {
@@ -33,10 +36,11 @@ export default function Project(){
     }
 
     function editPost(project){
-        console.log(project)
+        setMessage('')
         if(project.Value_project < project.cost){
-            //validação
-            //msg
+            setMessage("O orçamento do projeto não pode ser menor que o custo!")
+            setType("error")
+           return(false) 
         }
 
         fetch(`http://localhost:5000/projects/${project.id}`,{
@@ -50,7 +54,8 @@ export default function Project(){
             .then((data) => {
                 setProject(data)
                 setShowProjectForm(false)
-                
+                setMessage("Projeto alterado com sucesso!")
+                setType("success")   
             })
             .catch((err) => console.log(err))
             
@@ -62,6 +67,7 @@ export default function Project(){
             {project && (project.Name_project) ? 
             <div className={styles.projectDetails}>
                 <div className={styles.projectContainer}>
+                {message && <Message type={type} textMsg={message}/>}
                     <div className={styles.detailsContainer}>
                         <h1>Projeto: {project.Name_project}</h1>
                         <button className={styles.btn} onClick={toggleProjectForm}>
