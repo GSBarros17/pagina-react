@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom"
 import Loading from "../layout/Loading"
 import ProjectForm from "../project/ProjectForm"
 import Message from "../layout/Message"
+import CardsArea from "../layout/CardsArea"
 
 export default function Project(){
     
@@ -112,7 +113,12 @@ export default function Project(){
                     </div>
                 </div>
                 <h2>Serviços</h2>
-                
+                <CardsArea>
+                    <div>1</div>
+                    <div>1</div>
+                    <div>1</div>
+                    <div>1</div>
+                </CardsArea>  
             </div>
             : (<Loading />)}
         </>
