@@ -13,13 +13,6 @@
     text-decoration: underline #FFD00D;
 }
 
-.cardContainer{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 1em;
-}
-
 .noneCard{
     height: 40vh;
     font-size: 1.2em;

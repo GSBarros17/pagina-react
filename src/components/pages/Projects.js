@@ -5,6 +5,7 @@ import Message from "../layout/Message"
 import Loading from "../layout/Loading"
 import LinkButton from "../layout/LinkButton"
 import Cards from "../project/Cards"
+import CardsArea from "../layout/CardsArea"
 
 
 export default function Projects(){
@@ -60,7 +61,7 @@ export default function Projects(){
             </div>
             {text && <Message type="success" textMsg={text} />}
             {removeMessage && <Message type="success" textMsg={removeMessage} />}   
-            <div className={styles.cardContainer}>
+            <CardsArea>
                 {projects.length > 0 &&
                     projects.map((project) => 
                     <Cards 
@@ -72,7 +73,7 @@ export default function Projects(){
                         handleRemove={removeCard}
                     />
                 )}
-            </div>
+            </CardsArea>
             {!removeLoading && <Loading/>}
             {removeLoading && projects.length === 0 && (
                 <p className={styles.noneCard}>Não há projetos cadastrados!</p>
