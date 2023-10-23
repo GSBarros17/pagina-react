@@ -40,7 +40,7 @@ export default function Project(){
         if(project.Value_project < project.cost){
             setMessage("O orçamento do projeto não pode ser menor que o custo!")
             setType("error")
-           return(false) 
+            return(false)
         }
 
         fetch(`http://localhost:5000/projects/${project.id}`,{
