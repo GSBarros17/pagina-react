@@ -1,14 +1,39 @@
 {
   "projects": [
     {
-      "Name_project": "projeto 1",
-      "Value_project": "15632",
+      "Name_project": "projeto 5",
+      "Value_project": "1000",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "3",
+        "name": "Design"
       },
-      "cost": 0,
-      "service": [],
+      "cost": 601,
+      "service": [
+        {
+          "Name_service": "serviço21",
+          "cost": "100",
+          "Description": "personal project creation of an accounting",
+          "id": "68d4c00a-9b01-495e-bc26-55dfb3735d8b"
+        },
+        {
+          "Name_service": "serviço21",
+          "cost": "101",
+          "Description": "personal project creation of an accounting2",
+          "id": "64bf7e3b-5cc1-46c5-9b9d-3d8d4b30366f"
+        },
+        {
+          "Name_service": "serviço24",
+          "cost": "200",
+          "Description": "6484ASDASD2",
+          "id": "0c285625-e1f7-4647-90ed-5f357b073ee6"
+        },
+        {
+          "Name_service": "serviço25",
+          "cost": "200",
+          "Description": "personal project creation of an accounting1",
+          "id": "fbb980f9-217d-4451-a45a-9767ebd2d871"
+        }
+      ],
       "id": 1
     }
   ],
