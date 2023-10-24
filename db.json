@@ -35,6 +35,30 @@
         }
       ],
       "id": 1
+    },
+    {
+      "Name_project": "projeto 5s",
+      "Value_project": "789654",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 4234,
+      "service": [
+        {
+          "Name_service": "serviço2",
+          "cost": "1234",
+          "Description": "ooakdaks",
+          "id": "158f7e07-e06a-4acb-8a66-f2715c7dd34f"
+        },
+        {
+          "Name_service": "Contratação de desenvolvedor junior",
+          "cost": "3000",
+          "Description": "Contratação do desenvolver Guilherme, Rg 2980267, para integrar a equipe do projeto no front-end",
+          "id": "3288e30d-c114-4474-8567-ee7abc1c7e7e"
+        }
+      ],
+      "id": 2
     }
   ],
   "categories": [

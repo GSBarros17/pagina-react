@@ -6,17 +6,18 @@ import Loading from "../layout/Loading"
 import ProjectForm from "../project/ProjectForm"
 import Message from "../layout/Message"
 import CardsArea from "../layout/CardsArea"
+import ServiceCard from "../service/ServiceCard"
 import ServiceForm from "../service/ServiceForm"
 
 export default function Project(){
     
     const {id} = useParams()
-    const [project, setProject] = useState()
+    const [project, setProject] = useState([])
+    const [service, setService] = useState([])
     const [showProjectForm, setShowProjectForm] = useState(false)
     const [showServiceForm, setShowServiceForm] = useState(false)
     const [message, setMessage] = useState()
     const [type, setType] = useState()
-    
     
 
     useEffect(()=> {
@@ -30,6 +31,7 @@ export default function Project(){
             .then((resp) => resp.json())
             .then((data) => {
                 setProject(data)
+                setService(data.service)
             })
             .catch((err) => console.log(err))
         }, 1000)
@@ -102,10 +104,23 @@ export default function Project(){
                 setMessage("Projeto alterado com sucesso!")
                 setType("success")   
             })
-            .catch((err) => console.log(err))
-            
+            .catch((err) => console.log(err))    
     }
-    
+
+    function removeCard(id){
+        fetch(`http://localhost:5000/service/${id}`, {
+            method:'DELETE',
+            headers: {
+                'Content-type': 'application/json',
+            }
+        })
+        .then((resp) => resp.json())
+        .then(() => {
+            setService(service.filter((service) => service.id !== id)) 
+        })
+        .catch((err) => console.log(err))
+    }
+
     
     return(
         <>
@@ -158,10 +173,19 @@ export default function Project(){
                 </div>
                 <h2>Serviços</h2>
                 <CardsArea>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
+                    {service.length > 0 &&
+                        service.map((service) => 
+                        <ServiceCard
+                            id={service.id}
+                            name={service.Name_service}
+                            cost={service.cost}
+                            description={service.Description}
+                            key={service.id}
+                            handleRemove={removeCard}
+                        />
+                    )}
+                    {service.length === 0 && <p>Não há serviços cadastrados</p>
+                    }
                 </CardsArea>  
             </div>
             : (<Loading />)}
