@@ -50,7 +50,7 @@ export default function Project(){
         if(newCost > parseFloat(project.Value_project)){
             setMessage('Orçamento ultrapassado, verifique o valor do serviço!')
             setType('error')
-            project.services.pop()
+            project.service.pop()
             return false
         }
 
@@ -66,39 +66,13 @@ export default function Project(){
             .then((resp) => resp.json())
             .then((data) => {
                 setProject(data)
+                setService(data.service)
                 setShowServiceForm(false)
                 setMessage("Serviço adicionado com sucesso!")
                 setType("success")  
             })
             .catch((err) => console.log(err))
 
-    }
-
-    function removeCard(id, cost){
-
-        const serviceUpdated = project.service.filter(
-            (service) => service.id !== id,    
-        )
-       
-        const projectUpdated = project
-        
-        projectUpdated.service = serviceUpdated
-        
-        projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
-        
-        fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
-            method:'PATCH',
-            headers: {
-                'Content-type': 'application/json',
-            },
-            body: JSON.stringify(projectUpdated),
-            })
-            .then((resp) => resp.json())
-            .then((data) => {
-                setProject(projectUpdated)
-                setService(serviceUpdated)
-            })
-            .catch((err) => console.log(err))
     }
 
     function toggleProjectForm(){
@@ -134,6 +108,34 @@ export default function Project(){
             .catch((err) => console.log(err))    
     }
 
+    function removeCard(id, cost){
+        setMessage('')
+        const serviceUpdated = project.service.filter(
+            (service) => service.id !== id,    
+        )
+       
+        const projectUpdated = project
+        
+        projectUpdated.service = serviceUpdated
+        
+        projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
+        
+        fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+            method:'PATCH',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(projectUpdated),
+            })
+            .then((resp) => resp.json())
+            .then(() => {
+                setProject(projectUpdated)
+                setService(serviceUpdated)
+                setMessage('Serviço deletado com sucesso!')
+                setType('success')
+            })
+            .catch((err) => console.log(err))
+    }
     
     return(
         <>
