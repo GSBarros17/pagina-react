@@ -68,6 +68,7 @@ export default function Projects(){
                         id={project.id}
                         name={project.Name_project}
                         budget={project.Value_project}
+                        
                         category={project.category.name}
                         key={project.id}
                         handleRemove={removeCard}

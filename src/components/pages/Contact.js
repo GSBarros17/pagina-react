@@ -1,5 +1,10 @@
 import styles from "./Contact.module.css"
 
 export default function Contact(){
-    return <h1>Contact</h1>
+    return (
+        <div className={styles.containerContact}>
+            <h1>Contatos</h1>
+        </div>
+    )
+
 }

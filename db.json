@@ -1,5 +1,46 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "Name_project": "Desenvolvimento do BD",
+      "Value_project": "56",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "service": [],
+      "id": 2
+    },
+    {
+      "Name_project": "projeto 11",
+      "Value_project": "4578",
+      "category": {
+        "id": "5",
+        "name": "Manutenção"
+      },
+      "cost": 0,
+      "service": [],
+      "id": 3
+    },
+    {
+      "Name_project": "projeto 2",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "Value_project": "34678.87",
+      "cost": 567,
+      "service": [
+        {
+          "Name_service": "serviço2",
+          "cost": "567",
+          "Description": "pato caiu",
+          "id": "302a4c0f-32a4-4fe4-995c-24ced48d55c2"
+        }
+      ],
+      "id": 4
+    }
+  ],
   "categories": [
     {
       "id": 1,
