@@ -1,7 +1,7 @@
 import styles from "./Project.module.css"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import { parse, v4 as uuidv4} from "uuid"
+import { v4 as uuidv4} from "uuid"
 import Loading from "../layout/Loading"
 import ProjectForm from "../project/ProjectForm"
 import Message from "../layout/Message"
