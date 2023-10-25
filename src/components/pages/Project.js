@@ -8,6 +8,7 @@ import Message from "../layout/Message"
 import CardsArea from "../layout/CardsArea"
 import ServiceCard from "../service/ServiceCard"
 import ServiceForm from "../service/ServiceForm"
+import Numeral from "../layout/Numeral"
 
 export default function Project(){
     
@@ -154,10 +155,10 @@ export default function Project(){
                                     <span>Categoria: </span>{project.category.name}
                                 </p>
                                 <p>
-                                    <span>Total de Orçamento: </span>{project.Value_project}
+                                    <span>Total de Orçamento: </span>R$ <Numeral format="0,000.00">{project.Value_project}</Numeral>
                                 </p>
                                 <p>
-                                    <span>Total utilizado: </span>{project.cost}
+                                    <span>Total utilizado: </span>R$ <Numeral format="0,000.00">{project.cost}</Numeral>
                                 </p>
                             </div>
                         ) : (
