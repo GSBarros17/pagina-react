@@ -50,7 +50,7 @@ export default function Project(){
         if(newCost > parseFloat(project.Value_project)){
             setMessage('Orçamento ultrapassado, verifique o valor do serviço!')
             setType('error')
-            project.service.pop()
+            project.services.pop()
             return false
         }
 
@@ -72,6 +72,33 @@ export default function Project(){
             })
             .catch((err) => console.log(err))
 
+    }
+
+    function removeCard(id, cost){
+
+        const serviceUpdated = project.service.filter(
+            (service) => service.id !== id,    
+        )
+       
+        const projectUpdated = project
+        
+        projectUpdated.service = serviceUpdated
+        
+        projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
+        
+        fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+            method:'PATCH',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(projectUpdated),
+            })
+            .then((resp) => resp.json())
+            .then((data) => {
+                setProject(projectUpdated)
+                setService(serviceUpdated)
+            })
+            .catch((err) => console.log(err))
     }
 
     function toggleProjectForm(){
@@ -105,20 +132,6 @@ export default function Project(){
                 setType("success")   
             })
             .catch((err) => console.log(err))    
-    }
-
-    function removeCard(id){
-        fetch(`http://localhost:5000/service/${id}`, {
-            method:'DELETE',
-            headers: {
-                'Content-type': 'application/json',
-            }
-        })
-        .then((resp) => resp.json())
-        .then(() => {
-            setService(service.filter((service) => service.id !== id)) 
-        })
-        .catch((err) => console.log(err))
     }
 
     
@@ -174,7 +187,7 @@ export default function Project(){
                 <h2>Serviços</h2>
                 <CardsArea>
                     {service.length > 0 &&
-                        service.map((service) => 
+                        service.map((service) => (
                         <ServiceCard
                             id={service.id}
                             name={service.Name_service}
@@ -182,7 +195,7 @@ export default function Project(){
                             description={service.Description}
                             key={service.id}
                             handleRemove={removeCard}
-                        />
+                        />)
                     )}
                     {service.length === 0 && <p>Não há serviços cadastrados</p>
                     }

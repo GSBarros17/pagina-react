@@ -1,64 +1,15 @@
 {
   "projects": [
     {
-      "Name_project": "projeto 5",
-      "Value_project": "1000",
+      "Name_project": "projeto1",
+      "Value_project": "1200",
       "category": {
-        "id": "3",
-        "name": "Design"
+        "id": "4",
+        "name": "Planejamento"
       },
-      "cost": 601,
-      "service": [
-        {
-          "Name_service": "serviço21",
-          "cost": "100",
-          "Description": "personal project creation of an accounting",
-          "id": "68d4c00a-9b01-495e-bc26-55dfb3735d8b"
-        },
-        {
-          "Name_service": "serviço21",
-          "cost": "101",
-          "Description": "personal project creation of an accounting2",
-          "id": "64bf7e3b-5cc1-46c5-9b9d-3d8d4b30366f"
-        },
-        {
-          "Name_service": "serviço24",
-          "cost": "200",
-          "Description": "6484ASDASD2",
-          "id": "0c285625-e1f7-4647-90ed-5f357b073ee6"
-        },
-        {
-          "Name_service": "serviço25",
-          "cost": "200",
-          "Description": "personal project creation of an accounting1",
-          "id": "fbb980f9-217d-4451-a45a-9767ebd2d871"
-        }
-      ],
+      "cost": 0,
+      "service": [],
       "id": 1
-    },
-    {
-      "Name_project": "projeto 5s",
-      "Value_project": "789654",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 4234,
-      "service": [
-        {
-          "Name_service": "serviço2",
-          "cost": "1234",
-          "Description": "ooakdaks",
-          "id": "158f7e07-e06a-4acb-8a66-f2715c7dd34f"
-        },
-        {
-          "Name_service": "Contratação de desenvolvedor junior",
-          "cost": "3000",
-          "Description": "Contratação do desenvolver Guilherme, Rg 2980267, para integrar a equipe do projeto no front-end",
-          "id": "3288e30d-c114-4474-8567-ee7abc1c7e7e"
-        }
-      ],
-      "id": 2
     }
   ],
   "categories": [
