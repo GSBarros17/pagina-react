@@ -10,7 +10,7 @@ export default function Contact(){
                 <div className={styles.sectionTexts}>
                     <h2>Olá, me chamo <span>Guilherme Barros.</span></h2>
                     <p>Sou o responsável por desenvolver esta página!</p>
-                    <h3>Caso você tenha interesse no meu trabalho entre em contato comigo pelas minhas redes sociais</h3>
+                    <h3>Caso você tenha interesse no meu trabalho entre em contato comigo pelas minhas redes sociais:</h3>
                 </div> 
             </div>
         </div>

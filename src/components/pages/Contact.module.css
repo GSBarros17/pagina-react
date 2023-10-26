@@ -10,10 +10,11 @@
 .sectionContact{
     display: flex;
     flex-direction: row;
-    margin-top: 2em;
     background-color: #171717;
     padding: 2em;
     border-radius: 20px;
+    width: 80%;
+    margin: 2em auto;
 }
 
 .sectionContact img{
@@ -21,3 +22,24 @@
     border: 2px solid #FFD00D;
     margin-right: 2em;
 }
+
+.sectionTexts{
+    margin-top: 1em;
+}
+
+.sectionTexts h2{
+    color: #f9f9f9;
+    margin-bottom: 1em;
+}
+
+.sectionTexts p{
+    color: #7b7b7b;
+    margin-bottom: 1em;
+}
+
+.sectionTexts h3{
+    color: #f9f9f9;
+    margin-bottom: 1em;
+}
+
+
