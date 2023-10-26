@@ -42,4 +42,10 @@
     margin-bottom: 1em;
 }
 
+.socialMedia{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 
