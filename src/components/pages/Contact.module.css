@@ -42,10 +42,22 @@
     margin-bottom: 1em;
 }
 
-.socialMedia{
+.socialMidia{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 1em;
 }
 
+.socialMidia a{
+    margin-right: 1em;
+    color: #f9f9f9;
+    font-size: 2.5em;
+    transition: .5s;
+}
+
+.socialMidia a:hover{
+    color: #FFD00D;
+}
 
