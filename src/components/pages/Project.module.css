@@ -1,5 +1,18 @@
+.pagecontainer{
+    width: 100%;
+}
+
+.returnBtn{
+    font-size: 2em;
+    margin: .5em 1em;
+}
+
+.returnBtn svg{
+    color: #171717;
+}
+
 .projectDetails{
-    padding: 2em;
+    padding: 0em 2em 2em 2em;
     width: 100%;
 }
 
