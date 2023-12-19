@@ -1,7 +1,7 @@
 import styles from "./Company.module.css"
-import img2 from "../img/img2.png"
-import LinkButton from "../layout/LinkButton"
-import SectionContainer from "../layout/SectionContainer"
+import img2 from "../../img/img2.png"
+import LinkButton from "../../layout/LinkButton"
+import SectionContainer from "../../layout/SectionContainer"
 
 export default function Company(){
     return (
