@@ -1,6 +1,6 @@
 import styles from "./Home.module.css"
-import ImgBanner from "../img/img1.png"
-import LinkButton from "../layout/LinkButton"
+import ImgBanner from "../../img/img1.png"
+import LinkButton from "../../layout/LinkButton"
 
 export default function Home(){
     return (

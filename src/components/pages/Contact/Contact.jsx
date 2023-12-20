@@ -1,7 +1,7 @@
 import { BsPaperclip , BsGlobe2 , BsGithub , BsWhatsapp , BsLinkedin } from "react-icons/bs"
 import styles from "./Contact.module.css"
-import Devimg from "../img/devimg.jpg"
-import Docdev from "../../docs/curriculoGuilherme.docx"
+import Devimg from "../../img/devimg.jpg"
+import Docdev from "../../../docs/curriculoGuilherme.docx"
 export default function Contact(){
     return (
         <div className={styles.containerContact}>

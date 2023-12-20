@@ -18,8 +18,15 @@
         "id": "5",
         "name": "Manutenção"
       },
-      "cost": 0,
-      "service": [],
+      "cost": 1000,
+      "service": [
+        {
+          "Name_service": "serviço1120",
+          "cost": "1000",
+          "Description": "personal project creation of an accounting12",
+          "id": "7f3dda32-826d-43f7-9e3c-df97a3beff35"
+        }
+      ],
       "id": 3
     },
     {
@@ -39,6 +46,24 @@
         }
       ],
       "id": 4
+    },
+    {
+      "Name_project": "Projeto 16",
+      "Value_project": "1236504",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 132654,
+      "service": [
+        {
+          "Name_service": "asdege",
+          "cost": "132654",
+          "Description": "sasegsdvs",
+          "id": "b0b2189b-af38-4447-bab4-bde57d5d582d"
+        }
+      ],
+      "id": 5
     }
   ],
   "categories": [

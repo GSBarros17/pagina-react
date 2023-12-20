@@ -1,11 +1,11 @@
 import { useState, useEffect} from "react"
 import { useLocation } from "react-router-dom"
 import styles from "./Projects.module.css"
-import Message from "../layout/Message"
-import Loading from "../layout/Loading"
-import LinkButton from "../layout/LinkButton"
-import Cards from "../project/Cards"
-import CardsArea from "../layout/CardsArea"
+import Message from "../../layout/Message"
+import Loading from "../../layout/Loading"
+import LinkButton from "../../layout/LinkButton"
+import Cards from "../../project/Cards"
+import CardsArea from "../../layout/CardsArea"
 
 
 export default function Projects(){
