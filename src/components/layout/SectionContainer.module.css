@@ -10,7 +10,6 @@
 .containerSection p {
     font-size: 2em;
     line-height: 1.5em;
-    padding-top: 1em;
     color: #f9f9f9;
     padding: 1em;
 }
@@ -21,7 +20,44 @@
 }
 
 .containerSection img{
-    width: 30em;
+    width: 25em;
     margin: 1em 1.5em;
+}
+
+@media screen and (max-width: 1200px){
+    .containerSection{
+        padding-top: 1em;
+    }
+    
+    .containerSection p {
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+    
+    .containerSection img{
+        width: 20em;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .containerSection{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .containerSection p {
+        font-size: 1em;
+    }
+    
+    .containerSection img{
+        width: 20em;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .containerSection img{
+        width: 12em;
+    }
 }
 
