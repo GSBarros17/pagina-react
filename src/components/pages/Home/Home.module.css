@@ -25,7 +25,18 @@
     font-weight: 500;
     color: #5b5b5b;
 }
+
+.containerHome a {
+    margin: 1em;
+}
+
 .imgHome{
     width: 15em;
-    margin: 2em 0;
+    margin: 1em 0;
+}
+
+@media screen and (max-width: 800px){
+    .containerHome{
+        text-align: center;
+    }
 }
