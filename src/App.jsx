@@ -7,7 +7,7 @@ import Projects from "./components/pages/Projects/Projects"
 import NewProjects from "./components/pages/NewProjects/NewProjects"
 
 import Container from "./components/layout/Container"
-import Navbar from "./components/layout/Navbar"
+import Navbar from "./components/layout/Nav"
 import Footer from "./components/layout/Footer"
 
 function App() {

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
 import { FaBars } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react"
-import styles from "./Navbar.module.css"
+import styles from "./Nav.module.css"
 import logo from "../img/logo.svg"
 
-export default function Navbar(){
+export default function Nav(){
     
     const [hideNavbar, setHideNavbar] = useState("false")
 
@@ -33,8 +33,8 @@ export default function Navbar(){
     const navbarContainerRef = useRef(null)
 
     return (
-        <div className={styles.navbar}>
-            <section>
+        <div className={styles.navContainer}>
+            <section className={styles.headerMenu}>
                 <Link to="/" onClick={handleLinkClick}>
                     <img className={styles.logoNavbar} src={logo} alt="logo Finance Project" />
                 </Link>
@@ -42,20 +42,20 @@ export default function Navbar(){
                     <FaBars/>
                 </button>
             </section>   
-            <nav>
+            <nav className={`${styles.navbar} ${!hideNavbar ? styles.navItensToggle : ''}`}>
                 <ul className={styles.list}>
-                    <li className={styles.item} onClick={handleLinkClick}>
+                    <li onClick={handleLinkClick}>
                         <Link to="/">Home</Link>
                     </li>
-                    <li className={styles.item} onClick={handleLinkClick}>
+                    <li onClick={handleLinkClick}>
                         <Link to="/Company">Empresa</Link>
                     </li>
-                    <li className={styles.item} onClick={handleLinkClick}>
+                    <li onClick={handleLinkClick}>
                         <Link to="/Projects">Projetos</Link>
                     </li>
-                    <li className={styles.item} onClick={handleLinkClick}>
+                    <li onClick={handleLinkClick}>
                         <Link to="/Contact">Contato</Link>
-                    </li>                
+                    </li>       
                 </ul>
             </nav>
         </div>
