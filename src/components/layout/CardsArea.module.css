@@ -5,7 +5,7 @@
     grid-row-gap: 1em;
 }
 
-@media screen and (max-width: 1044px){
+@media screen and (max-width: 1244px){
     
     .cardContainer{
         grid-template-columns: 1fr 1fr 1fr;
