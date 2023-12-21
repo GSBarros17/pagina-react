@@ -1,6 +1,6 @@
 .projectsContainer{
     width: 100%;
-    padding: 32px;
+    padding: 2em;
 }
 
 .tittleProjects{
@@ -21,5 +21,23 @@
 }
 
 @media screen and (max-width: 500px){
+    .projectsContainer{
+        padding: 1em;
+    }
     
+    .tittleProjects{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+
+    .tittleProjects h1{
+        margin: 0.5em;
+    }
+
+    .tittleProjects a{
+        margin: .5em auto;
+    }
 }
