@@ -67,9 +67,33 @@
 }
 
 .projectInfo p{
-    color: #f9f9f9;
-    background-color: #171717;
-    width: 25%;
+    color: #171717;
+    width: 100%;
     padding: 0.5em 1em;
     border-radius: 20px;
+}
+
+.projectInfo span{
+    color: #171717;
+}
+
+@media screen and (max-width: 550px){
+    .projectContainer{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .btn{
+        margin: 1em 1em;
+    }
+    
+    .projectInfo{
+        margin-top: 0em;
+    }
+
+    .projectInfo form{
+        text-align: center;
+    }
+
 }

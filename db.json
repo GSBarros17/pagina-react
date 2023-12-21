@@ -18,13 +18,31 @@
         "id": "5",
         "name": "Manutenção"
       },
-      "cost": 1000,
+      "cost": 3701,
       "service": [
         {
           "Name_service": "serviço1120",
           "cost": "1000",
           "Description": "personal project creation of an accounting12",
           "id": "7f3dda32-826d-43f7-9e3c-df97a3beff35"
+        },
+        {
+          "Name_service": "sadfasascda",
+          "cost": "122",
+          "Description": "adfasdasd",
+          "id": "5857e0ce-e46a-4ca8-ac0f-34c7285eb474"
+        },
+        {
+          "Name_service": "afsdfaf",
+          "cost": "123",
+          "Description": "dasavdfvsd",
+          "id": "b663f0bb-11d1-4142-804d-a0e84ea64020"
+        },
+        {
+          "Name_service": "advadfvdsfvas",
+          "cost": "2456",
+          "Description": "davsdasva",
+          "id": "ed15e51d-a14c-41e6-af3d-297189074295"
         }
       ],
       "id": 3

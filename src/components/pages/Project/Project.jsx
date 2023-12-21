@@ -163,10 +163,10 @@ export default function Project(){
                                         <span>Categoria: </span>{project.category.name}
                                     </p>
                                     <p>
-                                        <span>Total de Orçamento: </span>R$ <Numeral format="0,000.00">{project.Value_project}</Numeral>
+                                        <span>Orçamento: </span>R$ <Numeral format="0,000.00">{project.Value_project}</Numeral>
                                     </p>
                                     <p>
-                                        <span>Total utilizado: </span>R$ <Numeral format="0,000.00">{project.cost}</Numeral>
+                                        <span>Utilizado: </span>R$ <Numeral format="0,000.00">{project.cost}</Numeral>
                                     </p>
                                 </div>
                             ) : (
@@ -194,6 +194,7 @@ export default function Project(){
                                 projectData={project}
                             />}
                         </div>
+                        {message && <Message type={type} textMsg={message}/>}
                     </div>
                     <h2>Serviços</h2>
                     <CardsArea>
