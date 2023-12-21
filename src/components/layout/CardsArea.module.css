@@ -30,3 +30,11 @@
     }
     
 }
+
+@media screen and (max-width: 400px){
+    
+    .cardContainer{
+        width: 100%;
+    }
+    
+}
