@@ -55,7 +55,10 @@ export default function Nav(){
                     </li>
                     <li onClick={handleLinkClick}>
                         <Link to="/Contact">Contato</Link>
-                    </li>       
+                    </li>
+                    <li onClick={handleLinkClick}>
+                        <Link to="/Login">Login</Link>
+                    </li>  
                 </ul>
             </nav>
         </div>
